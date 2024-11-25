@@ -1,0 +1,47 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model pessoas {
+  id       String   @id @default(uuid())
+  nome     String   @db.VarChar(100)
+  cpf      String   @db.VarChar(14)
+  dataNasc DateTime
+  mae      String   @db.VarChar(100)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  clientes      clientes?    @relation(fields: [clientesId], references: [id]) // 1 pessoa tem 1 cliente
+  clientesId    String?
+  alunos        alunos?      @relation(fields: [alunosId], references: [id]) // 1 pessoa tem 1 aluno
+  alunosId      String?
+  professores   professores? @relation(fields: [professoresId], references: [id]) // 1 pessoa tem 1 professor
+  professoresId String?
+}
+
+model clientes {
+  id           String    @id @default(uuid())
+  dataCadastro DateTime 
+  status       String
+  pessoa       pessoas[] // 1 cliente tem 1 pessoa
+}
+
+model alunos {
+  id          String    @id @default(uuid())
+  matricula   Int
+  anoIngresso Int
+  pessoa      pessoas[] // 1 aluno tem 1 pessoa
+}
+
+model professores {
+  id             String    @id @default(uuid())
+  areaAtuacao    String
+  numeroRegistro Int
+  pessoa         pessoas[] // 1 professor tem 1 pessoa
+}

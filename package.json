@@ -1,0 +1,22 @@
+{
+  "name": "corelab-api-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/server.js",
+    "studio": "yarn prisma studio",
+    "masterreset": "yarn prisma migrate reset --force && yarn migrate"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^5.17.0",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "prisma": "^5.17.0"
+  }
+}
