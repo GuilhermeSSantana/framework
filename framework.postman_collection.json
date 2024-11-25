@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "d7188210-c4ab-4a8d-bb33-9f8e2bb29c93",
+		"name": "framework",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29415883"
+	},
+	"item": [
+		{
+			"name": "BuscarPessoas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3333/pessoas"
+			},
+			"response": []
+		},
+		{
+			"name": "CriarPessoas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"nome\": \"João da Silva\",\r\n  \"cpf\": \"123.456.789-10\",\r\n  \"dataNasc\": \"1990-05-15T00:00:00.000Z\",\r\n  \"mae\": \"Maria da Silva\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3333/pessoas"
+			},
+			"response": []
+		},
+		{
+			"name": "BuscarProfessores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3333/professores"
+			},
+			"response": []
+		},
+		{
+			"name": "CriarProfessores",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pessoa\": \"040c5520-ad4e-4c9f-a9d6-0fcf3b9205f9\",\r\n    \"areaAtuacao\": \"Graduação\",\r\n    \"numeroRegistro\": 22\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3333/professores"
+			},
+			"response": []
+		},
+		{
+			"name": "BuscarAlunos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3333/alunos"
+			},
+			"response": []
+		},
+		{
+			"name": "CriarAlunos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pessoa\": \"040c5520-ad4e-4c9f-a9d6-0fcf3b9205f9\",\r\n    \"matricula\": 20213201,\r\n    \"anoIngresso\": 2021\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3333/alunos"
+			},
+			"response": []
+		},
+		{
+			"name": "BuscarClentes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3333/clientes"
+			},
+			"response": []
+		},
+		{
+			"name": "CriarClientes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pessoa\": \"040c5520-ad4e-4c9f-a9d6-0fcf3b9205f9\",\r\n    \"dataCadastro\": \"2024-11-24T12:00:00.000Z\",\r\n    \"status\": \"Ativo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3333/clientes"
+			},
+			"response": []
+		}
+	]
+}
