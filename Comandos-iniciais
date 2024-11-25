@@ -1,0 +1,10 @@
+yarn ou npm  -  Instala as dependencias
+
+docker-compose up  - Inicia o banco de dados no docker
+
+npx prisma migrate dev framework init -  Cria a estrutura de pastas e arquivos para o projeto
+
+yarn ou npm dev - Inicia o servidor
+
+yarn studio ou npm studio - Inicia o prisma studio para visualizar o banco de dados
+
